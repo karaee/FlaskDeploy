@@ -1,0 +1,132 @@
+html{
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr; /* 1/10th, 8/10th, 1/10th */
+    height: 100%;
+    width: 100%;
+    align-content:stretch;
+}
+body > *{
+    min-width: 0;
+}
+/* Styles for the columns */
+#top, #main-content, #bottom {
+    padding: 10px;
+}
+/* Top Panel */
+
+#main-content > *{
+    min-width: 0;
+    min-height: 0;
+}
+
+#top {
+    display: flex; 
+    background: lightgreen;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 10px;
+}
+
+#player {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: start;
+    background: lightgreen;
+    align-content: center;
+    gap: 10px;
+}
+
+#info-board{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 10px;
+}
+
+#info-table * {
+    border:none;
+    width: 415;
+}
+/* Main content */
+#bottom {
+    background: lightcoral;
+    justify-content: space-between;
+}
+
+#order-book{
+    justify-content: space-around;
+    min-height: 0;
+    overflow-y: scroll;
+}
+
+#d-icon{
+    display: inline-block;
+}
+
+#foresight-buffer{
+    background: lightyellow;
+    min-height: 0;
+    overflow-y: scroll;
+    justify-content: space-around;
+}
+
+#mapid {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main-content{
+    display: grid;
+    grid-template-columns: 10fr 80fr 10fr; /* 1/10th, 9/10th, 0/10th */
+    padding: 0px;
+    min-height: 0;
+
+}
+
+.player-button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    fill: "currentColor";
+}
+
+#frameJump-textbox {
+    grid-column: span 2;
+    height: 40px;
+}
+
+#frameJump-input {
+    grid-column: span 2;
+    height: 40px;
+    resize: none;
+    align-content: center;
+    justify-content: center;
+}
+
+button:disabled {
+    opacity: 0.5; /* Makes it look faded */
+    pointer-events: none; /* Prevents clicks */
+}
+
+.depot-tooltip{
+    font-size: 9px;
+    color: black;
+}
+
+#order-book-table{
+    border-collapse: collapse;
+    border: none;
+    white-space: nowrap;
+    padding: 5px;
+}
+#order-book-content{
+    padding: 5px;
+}
+

@@ -1,0 +1,44 @@
+name: envDP
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+  - defaults
+  - pyg
+dependencies:
+  - python=3.11.6
+  - pytorch=2.1.0
+  - pip
+  - cpuonly
+  - pybind11=2.11.1
+  - pytest
+  - pip:
+    - torch_geometric==2.4.0
+    - gymnasium==0.29.1
+    - tianshou==0.5.1
+    - matplotlib
+
+# name: envDP
+# channels:
+#   - pytorch        # official PyTorch channel first
+#   - nvidia         # for GPU packages if needed
+#   - defaults       # default conda packages
+#   - conda-forge    # other packages from conda-forge
+# channel_priority: strict  # enforce strict channel priority
+
+# dependencies:
+#   - python=3.11.6
+#   - pytorch=2.1.0
+#   - cpuonly        # CPU-only PyTorch; replace with pytorch-cuda=12.1 for GPU
+#   - pybind11=2.11.1
+#   - pytest
+#   - pandas
+#   - pip
+#   - pip:
+#       - torch_geometric==2.4.0
+#       - gymnasium==0.29.1
+#       - tianshou==0.5.1
+#       - matplotlib
+      # - flask
+      # - flask-socketio
+      # - json5

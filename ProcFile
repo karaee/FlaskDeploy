@@ -1,0 +1,1 @@
+web: gunicorn -k eventlet -w 1 python.scripts.container_allocation.container_renderer_web_deployment:app

@@ -1,0 +1,325 @@
+{
+  "id": "container_allocation",
+  "discount_factor": 1,
+  "mlp_per_node_features": false,
+  "decision_delay_amount": 14400,
+  "container_types": [
+    { "key": "Generic" }
+  ],
+  "initial_containers": [
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "North",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "Center",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Generic",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    },
+    {
+      "type_key": "Special",
+      "depot_key": "South",
+      "release_times": [ 0, 0, 0, 0 ]
+    }
+  ],
+  "pooled_arrival": 1,
+  "pooled_arrival_rate": 0.008,
+  "order_types": [
+    {
+      "key": "Regular",
+      "arrival_rate": 75,
+      "container_type_options": [ "Generic" ]
+    }
+  ],
+  "emprical_order_distribution": 0,
+  "continuous_order_locations": 0,
+  "order_lanes": [
+    {
+      "o_key": "North",
+      "d_key": "Center",
+      "weight": 25
+    },
+    {
+      "o_key": "Center",
+      "d_key": "North",
+      "weight": 75
+    },
+    {
+      "o_key": "South",
+      "d_key": "Center",
+      "weight": 25
+    },
+    {
+      "o_key": "Center",
+      "d_key": "South",
+      "weight": 75
+    }
+  ],
+  "due_date_windows": [
+    {
+      "key": "passive",
+      "mean": 2000,
+      "weight": 100
+    }
+  ],
+  "world_anchor": [ 30, -15 ],
+  "world_size": [ 40, 60 ],
+  "depots": [
+    {
+      "key": "Center",
+      "coords": [ 50.0, 13.0718 ]
+    },
+    {
+      "key": "North",
+      "coords": [ 54.0, 20.0 ]
+    },
+    {
+      "key": "South",
+      "coords": [ 40.2020, 20.0 ]
+    }
+  ],
+  "travel_times_source": 0,
+  "distance_norm": 2,
+  "travel_time_per_unit_distance": 111,
+  "travel_costs_source": 0,
+  "revenues_source": 0,
+  "revenue_travel_cost_ratio": 20,
+  "waiting_cost_rate": 0.1,
+  "waiting_allowance": 0
+}

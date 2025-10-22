@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Leaflet Map with WebSockets</title>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+    <!-- Leaflet JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+
+<body>
+    <div id="top">
+        <div id="player">
+            <button id="prevFrame-button" class="player-button" onclick="prevFrame()" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 4h2v16H6zM10 12l10 8V4z" />
+                </svg>
+            </button>
+            <button id="playBackward-button" class="player-button" onclick="playBackward()" disabled> <!--Play Backward -->
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4l-12 8 12 8z" />
+                </svg>
+            </button>
+            <button  id="pauseAnimation-button" class="player-button" onclick="pauseAnimation()" disabled>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 5h4v14H6zM14 5h4v14h-4z" />
+                </svg>
+            </button>
+            <button  id="playAnimation-button" class="player-button" onclick="playAnimation()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 5v14l11-7z" />
+                </svg>
+            </button>
+            <button  id="nextFrame-button" class="player-button" onclick="nextFrame()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 4h2v16h-2zM4 4v16l10-8z" />
+                </svg>
+            </button>
+            <button id="frameJump-textbox" onclick="jumpToFrame()">
+                Go to frame:
+            </button>
+            <textarea id="frameJump-input">0</textarea>
+            <p id="maxFrame">/{{ maxFrame }}</p>
+        </div>
+        <div id="info-board">
+            <table id="info-table">
+                <tbody>
+                  <tr>
+                    <td>Frame:</td><td id="frame">0</td><td>&nbsp;&nbsp;</td>
+                    <td>Σ Waiting cost:</td><td id="tot-wait-cost">0</td>
+                  </tr>
+                  <tr>
+                    <td>Current time:</td><td id="time">0</td><td>&nbsp;&nbsp;</td>
+                    <td>Σ Lost sale cost:</td><td id="tot-lost-cost">0</td>
+                  </tr>
+                  <tr>
+                    <td>Σ Arrivals:</td><td id="tot-arrv">0</td><td>&nbsp;&nbsp;</td>
+                    <td>Σ Cost:</td><td id="tot-cost">0</td>
+                  </tr>
+                  <tr>
+                    <td>Σ Lost sales:</td><td id="tot-lost-sale">0</td><td>&nbsp;&nbsp;</td>
+                    <td>Incurring cost</td><td id="incr-cost">0</td>
+                  </tr>
+                  <tr>
+                    <td id="state-cat-message" colspan="5"></td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="main-content">
+        <div id="order-book">
+            <table id="order-book-table">
+                <thead>
+                    <tr>
+                        <th id="order-book-header" colspan="3"
+                            style="text-decoration: underline; border: none;">
+                            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Order Book &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        </th>      
+                    </tr>
+                </thead>
+                <tbody id="order-book-content">
+                    <tr>
+                        <td colspan="3">Order book is empty</td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>
+        <div id="mapid"></div>
+        <div id="foresight-buffer">
+            <table id="foresight-buffer-table">
+                <thead>
+                    <tr>
+                        <th id="foresight-buffer-header" colspan="3"
+                            style="text-decoration: underline; border: none;">
+                            <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Foresight Buffer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                        </th>      
+                    </tr>
+                </thead>
+                <tbody id="foresight-buffer-content">
+                    <tr>
+                        <td colspan="3">Foresight buffer is empty</td>
+                    </tr>
+                </tbody>
+            </table>        
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="container-type-legend"></div>
+        <div id="plan"></div>
+    </div>
+
+</body>
+
+</html>

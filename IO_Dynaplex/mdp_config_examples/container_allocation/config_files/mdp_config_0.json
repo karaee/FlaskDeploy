@@ -1,0 +1,114 @@
+{
+  "id": "container_allocation",
+  "discount_factor": 1.0,
+  "decision_delay_amount": 1440,
+  "container_types": [
+    { "key": "1" },
+    { "key": "2" },
+    { "key": "3" },
+    { "key": "4" }
+  ],
+  "initial_containers": [
+    {
+      "type_key": "1",
+      "depot_key": "1"
+    },
+    {
+      "type_key": "1",
+      "depot_key": "2"
+    },
+    {
+      "type_key": "2",
+      "depot_key": "3"
+    },
+    {
+      "type_key": "2",
+      "depot_key": "4"
+    },
+    {
+      "type_key": "3",
+      "depot_key": "1"
+    },
+    {
+      "type_key": "3",
+      "depot_key": "2"
+    },
+    {
+      "type_key": "3",
+      "depot_key": "3"
+    },
+    {
+      "type_key": "3",
+      "depot_key": "4"
+    },
+    {
+      "type_key": "4",
+      "depot_key": "1"
+    },
+    {
+      "type_key": "4",
+      "depot_key": "2"
+    },
+    {
+      "type_key": "4",
+      "depot_key": "3"
+    },
+    {
+      "type_key": "4",
+      "depot_key": "4"
+    }
+  ],
+  "pooled_arrival": 0,
+  "order_types": [
+    {
+      "key": "1",
+      "arrival_rate": 0.00625,
+      "container_type_options": [ "1", "2" ],
+      "mean_due_date_window": 50
+    },
+    {
+      "key": "2",
+      "arrival_rate": 0.01250,
+      "container_type_options": [
+        "1",
+        "2",
+        "3"
+      ],
+      "mean_due_date_window": 40
+    },
+    {
+      "key": "3",
+      "arrival_rate": 0.00625,
+      "container_type_options": [ "1", "4" ],
+      "mean_due_date_window": 60
+    }
+  ],
+  "emprical_order_distribution": 0,
+  "world_anchor": [ 30, -15 ],
+  "world_size": [ 40, 60 ],
+  "depots": [
+    {
+      "key": "1",
+      "location": { "coords": [ 25, 75 ] }
+    },
+    {
+      "key": "2",
+      "location": { "coords": [ 75, 75 ] }
+    },
+    {
+      "key": "3",
+      "location": { "coords": [ 25, 25 ] }
+    },
+    {
+      "key": "4",
+      "location": { "coords": [ 75, 25 ] }
+    }
+  ],
+  "travel_times_source": 0,
+  "distance_norm": 2,
+  "travel_costs_source": 0,
+  "revenues_source": 0,
+  "revenue_travel_cost_ratio": 2,
+  "waiting_cost_rate": 0.1,
+  "waiting_allowance": 2880
+}

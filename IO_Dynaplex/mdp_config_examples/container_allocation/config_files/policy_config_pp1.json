@@ -1,0 +1,8 @@
+{
+  "id": "PeriodicPlanning",
+  "foresighted": true,
+  "lookahead_horizon": 10,
+  "revision_horizon": 10, //Ineffective when foresighted
+  "planner": 1, // 0: Math planner, 1: Nearest depot planner
+  "preplanner": false // If true, nearest depot planner is used as a preplanner
+}
